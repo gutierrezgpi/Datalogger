@@ -2,10 +2,10 @@
 Leitura de temperatura, pressão atmosférica e altitude com BMP280.
 """
 
-import time
+from time import sleep
+from datetime import datetime
 import board
 import adafruit_bmp280
-from datetime import datetime
 
 i2c = board.I2C()
 
@@ -26,7 +26,7 @@ try:
     
     for i in range(4):
         
-        time.sleep(1)
+        sleep(1)
 
         temperature = bmp280.temperature
         pressure = bmp280.pressure
